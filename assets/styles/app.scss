@@ -1,0 +1,32 @@
+.body {
+    // background-color: lightgray;
+    background-color: #e6e4e4;
+}
+
+.header{background-color:black; height:70px; width:100%; position:absolute; top:0px; display: flex; z-index: 3;}
+.name_site{margin-top:20px; margin-left:20px; font-size: 30px; color:#E0CBCB; font-family: 'Open Sans', serif; }
+.name_site:hover{color:#D7C1C1; text-decoration:none}
+.ul_register{display:flex; list-style:none; top:20px; right:20px; position:absolute;  }
+.li_register{padding-right: 20px; color:white; font-family: 'Open Sans', sans-serif; font-weight: 300; color:#E0CBCB;}
+.li_register:hover{color:#C0A0A0; text-decoration:none}
+.localisation{align-items: center; display: flex; margin-left: 30px;}
+.logo_localisation{height: 25px; margin-top: -10px;}
+.text_localisation{font-size: 15px; color: white; margin-top: 5px;}
+
+// .bentley{height:90vh; width:100%; object-fit: cover;}
+// .lambo{height:90vh; width:100%; object-fit: cover;}
+// .aston{height:500px; width:900px; object-fit: cover;}
+// .class_g63{height:90vh; width:110%; object-fit: cover;} 
+
+
+
+footer{position: absolute; margin-bottom: 0; margin-top: 20px; background-color: black; width: 100%;}
+.grid-container_footer{display:flex; justify-content: space-around;}
+.item_footer{padding: 20px;}
+.title_footer{color: white; text-align: center;}
+.text_footer{width: 500px; color: white;}
+.ul_contact_footer{color: white; list-style: none;}
+.logo_footer{height: 30px;}
+.ul_logo_footer{display: flex; list-style: none;}
+
+  
