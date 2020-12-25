@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CommentPost index{% endblock %}
+
+{% block stylesheets %} 
+{{ parent() }}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; margin-top:100px }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .li_login{display:none}
+    .li_register{display:none}
+    .li_compte{display:block}
+</style>
+{% endblock %}
+
+
+{% block body %}
+
+
+<li> <a href="{{ path('user') }}">Profil</a></li>  
+    <h1>CommentPost index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <!-- <th>Id</th> -->
+                <th>Title</th>
+                <th>Content</th>
+                <th>CreateAt</th>
+                <th>Author</th>
+                <th>action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for comment_post in comment_posts %}
+            <tr>
+                <!-- <td>{{ comment_post.id }}</td> -->
+                <td>{{ comment_post.Title }}</td>
+                <td>{{ comment_post.Content }}</td>
+                <td>{{ comment_post.CreateAt ? comment_post.CreateAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ comment_post.Author }}</td>
+                <td>
+                    {# <a href="{{ path('comment_post_show', {'id': comment_post.id}) }}">show</a> #}
+                    <a href="{{ path('comment_post_edit', {'id': comment_post.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('comment_post_new') }}">Create new</a>
+{% endblock %}

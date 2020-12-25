@@ -109,7 +109,7 @@ class User implements UserInterface
     {
         // not needed when using the "bcrypt" algorithm in security.yaml
     }
-
+ 
     /**
      * @see UserInterface
      */

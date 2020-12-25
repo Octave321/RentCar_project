@@ -3,7 +3,7 @@
 namespace App\Form;
 
 use App\Entity\CommentPost;
-use Symfony\Component\Form\AbstractType; 
+use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -12,9 +12,10 @@ class CommentPostType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('Title') 
             ->add('Content')
-            ->add('CreatedAt')
-            ->add('Author')
+            // ->add('CreateAt')
+            // ->add('Author')
         ;
     }
 

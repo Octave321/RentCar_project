@@ -13,16 +13,31 @@
     <body class="body">
 
         <div class="header">
-            <h1> <a class="name_site" href="{{ path('accueil') }}">PRESTIGE*CAR</a></h1>
+                {% if app.user %}
+                    <h1><a class="name_site" href="{{ path('user') }}">PRESTIGE*CAR</h1>
+                {% else %}
+                    <h1><a class="name_site" href="{{ path('accueil') }}">PRESTIGE*CAR</a></h1>
+                {% endif %}
             <div class="localisation"><img class="logo_localisation" src="{{ asset('build/logo_localisation.png') }}"><p class="text_localisation">Disponible en location à Paris, Monaco</p></div>
             <ul class="ul_register">
-                <li class="li_regitser"> <a class="li_register" href="{{ path('app_register') }}">Register</a></li>
-                <li class="li_login"> <a class="li_register" href="{{ path('app_login') }}">Login</a></li>
+                {% if app.user %}
+                    <li class="li_compte"><img class="icon_user" src="{{ asset('build/icon_user.png') }}">
+                        <ul class="ul_parametre">
+                            <li class="li_parametre"><a class="btn_compte" href="{{ path('compte') }}">Compte</a></li>
+                            <li class="li_parametre"><a class="btn_logout" href="{{ path('app_logout') }}">Logout</a></li>
+                        </ul>
+                    </li>
+                {% else %}
+                    <li class="li_regitser"> <a class="li_register" href="{{ path('app_register') }}">Register</a></li>
+                    <li class="li_login"> <a class="li_register" href="{{ path('app_login') }}">Login</a></li>
+                {% endif %}
             </ul>
         </div> 
 
-        {% block body %}{% endblock %}
 
+
+        {% block body %}{% endblock %}
+ 
         <footer> 
             <div class="grid-container_footer">
                 <div class="item_footer">
@@ -31,7 +46,7 @@
                 </div>
                 <div class="item_footer">
                 <h3 class="title_footer">CONTACT</h3> 
-                <ul class="ul_contact_footer">
+                <ul class="ul_contact_footer"> 
                     <li>contact@prestigecar.com</li>
                     <li>0330807626</li>
                     <li>
@@ -43,7 +58,7 @@
                     </li>
                 </ul>
                 </div>
-            </div>
+            </div> 
         </footer>
 
     

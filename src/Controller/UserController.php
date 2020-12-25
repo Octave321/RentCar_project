@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Service\Mailer;
+use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -24,13 +25,13 @@ class UserController extends AbstractController
     /**
      * @Route("/user/offre", name="offre")
      */
-    // public function offre(): Response
-    // {
-    //     return $this->render('user/offre.html.twig', [
-    //         'title' => 'offre',
+    public function offre(): Response
+    {
+        return $this->render('user/offre.html.twig', [
+            'title' => 'offre',
           
-    //     ]);
-    // }
+        ]);
+    }
 
     public function mail2(Mailer $mailer): Response
     {
@@ -52,14 +53,40 @@ class UserController extends AbstractController
     }
 
 
+
     /**
-     * @Route("/commentaire", name="commentaire")
+     * @Route("/compte", name="compte")
      */
-    public function commentaire(): Response
+
+    // public function update(int $id): Response
+    // {
+    //     $entityManager = $this->getDoctrine()->getManager();
+    //     $user = $entityManager->getRepository(User::class)->find($id);
+
+    //     if (!$user) {
+    //         throw $this->createNotFoundException(
+    //             'No product found for id '.$id
+    //         );
+    //     }
+
+    //     $user->setName('New Name!');
+    //     $entityManager->flush();
+
+    //     $user->setEmail('New Email!');
+    //     $entityManager->flush();
+
+    //     $user->setPassword('New Password!');
+    //     $entityManager->flush();
+
+    //     return $this->redirectToRoute('user', [
+    //         'id' => $user->getId()
+    //     ]);
+    // }
+
+    public function compte(): Response
     {
-        return $this->render('user/commentaire.html.twig', [
-            'commentaire' => 'text',
-            'author' => 'name',
+        return $this->render('user/compte.html.twig', [
+            'title' => 'formule',
         ]);
     }
 }

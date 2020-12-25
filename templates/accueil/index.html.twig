@@ -4,13 +4,11 @@
 
 {% block stylesheets %}
 {{ parent() }}
+
 <style>
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
     body{background-color:#E1E1E1}
-    {# #carouselExampleCaptions{margin-top:100px; height:100%; width:130%; position:relative; margin-top:0px; } #}
-    
-    {# .carousel{justify-self:stretch} #}
-    .carousel-inner img{width:100%; height:570px}
+    .carousel-inner img{width:100%; height:96vh; margin-top:-30px}
     .grid_container_marque{display:flex; justify-content:space-around}
     .item1_marque{margin-top:30px; color:grey; border:none; border-radius: 10px; height: 50px; width:170px; background-color: black; text-align:center; padding-top:10px; box-shadow: 0 0 2em  black; }
     .vision_company{padding:50px}
@@ -18,7 +16,7 @@
 {% endblock %}
 
 {% block body %}
-
+ 
 
 <div class="example-wrapper">  
  
@@ -42,7 +40,7 @@
             <div class="carousel-caption d-none d-md-block">
                 <h5>Second slide label</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
-            </div>
+            </div> 
             </div>
             <div class="carousel-item">
             <img class="aston" src="{{ asset('build/class_g63.jpg') }}" class="d-block w-100" alt="...">
@@ -64,85 +62,84 @@
 
 </div>
 
+
     <div class="container_marque">
         <div class="grid_container_marque">
             <div class="item1_marque">
-                {# <a href="{{ path('audi') }}"><img class="logo_audi" src="{{ asset('build/logo_audi.png') }}"></a> #}
-                <p class="marque">AUDI</p>
+                <a href="{{ path('audi') }}"><p class="marque">AUDI</p></a>                 
             </div>
 
             <div class="item1_marque">
-                {# <a href="{{ path('mercedes') }}"><img class="logo_marque" src="{{ asset('build/logo_mercedes.png') }}"></a> #}
-                <p class="marque">ASTON MARTIN</p>
+                <a href="{{ path('mercedes') }}"><p class="marque">ASTON MARTIN</p></a>
+                
             </div>
 
             <div class="item1_marque">
-                {# <a href="{{ path('bmw') }}"><img class="logo_marque" src="{{ asset('build/logo_bmw.png') }}"></a> #}
-                <p class="marque">JAGUAR</p>
+                <a href="{{ path('bmw') }}"><p class="marque">JAGUAR</p></a>
+                
             </div>
 
             <div class="item1_marque">
-                {# <a href="{{ path('aston') }}"><img class="logo_marque" src="{{ asset('build/logo_aston.png') }}"></a> #}
-                <p class="marque">MERCEDES</p>
+                <a href="{{ path('aston') }}"><p class="marque">MERCEDES</p></a>
+                
             </div>
 
             <div class="item1_marque">
-                {# <a href="{{ path('maserati') }}"><img class="logo_marque" src="{{ asset('build/logo_maserati.png') }}"></a> #}
-                <p class="marque">MASERATI</p>
+                <a href="{{ path('maserati') }}"><p class="marque">MASERATI</p></a>                
             </div>
         </div>
 
         <div class="grid_container_marque">    
             <div class="item1_marque">
-                {# <a href="{{ path('porsche') }}"><img class="logo_marque" src="{{ asset('build/logo_porsche.png') }}"></a> #}
-                <p class="marque">BMW</p>
+                <a href="{{ path('porsche') }}"><p class="marque">BMW</p></a>
+                
             </div>
 
             <div class="item1_marque">
-                {# <a href="{{ path('lamborghini') }}"><img class="logo_marque" src="{{ asset('build/logo_lamborghini.png') }}"></a> #}
-                <p class="marque">LAMBORGHINI</p>
+                <a href="{{ path('lamborghini') }}"><p class="marque">LAMBORGHINI</p></a>
+                
             </div>
 
             <div class="item1_marque">
-                {# <a href="{{ path('ferrari') }}"><img class="logo_marque" src="{{ asset('build/logo_ferrari.png') }}"></a> #}
-                <p class="marque">FERRARI</p>
+                <a href="{{ path('ferrari') }}"><p class="marque">FERRARI</p></a>
+                
             </div>
 
             <div class="item1_marque">
-                {# <a href="{{ path('bentley') }}"><img class="logo_marque" src="{{ asset('build/logo_bentley.png') }}"></a> #}
-                <p class="marque">PORSCHE</p>
+                <a href="{{ path('bentley') }}"><p class="marque">PORSCHE</p></a>
+                
             </div>
 
             <div class="item1_marque">
-                {# <a href="{{ path('rolls') }}"><img class="logo_marque" src="{{ asset('build/logo_rolls.png') }}"></a> #}
-                <p class="marque">MACLAREN</p>
+                <a href="{{ path('rolls') }}"><p class="marque">MACLAREN</p></a>
+                
             </div>
         </div>
 
         <div class="grid_container_marque">
             <div class="item1_marque">
-                {# <a href="{{ path('maclaren') }}"><img class="logo_maclaren" src="{{ asset('build/logo_maclaren.png') }}"></a> #}
-                <p class="marque">FORD</p>
+                <a href="{{ path('maclaren') }}"><p class="marque">FORD</p></a>
+                
             </div>
 
             <div class="item1_marque">
-                {# <a href="{{ path('jaguar') }}"><img class="logo_marque" src="{{ asset('build/logo_jaguar.png') }}"></a> #}
-                <p class="marque">ROLLS ROYCE</p>
+                <a href="{{ path('jaguar') }}"><p class="marque">ROLLS ROYCE</p></a>
+                
             </div>
 
             <div class="item1_marque">
-                {# <a href="{{ path('land_rover') }}"><img class="logo_marque" src="{{ asset('build/logo_land_rover.png') }}"></a> #}
-                <p class="marque">BENTLEY</p>
+                <a href="{{ path('land_rover') }}"><p class="marque">BENTLEY</p></a>
+                
             </div>
 
             <div class="item1_marque">
-                {# <a href="{{ path('ford') }}"><img class="logo_ford" src="{{ asset('build/logo_ford.png') }}"></a> #}
-                <p class="marque">LAND ROVER</p>
+                <a href="{{ path('ford') }}"><p class="marque">LAND ROVER</p></a>
+                
             </div>
 
             <div class="item1_marque">
-                {# <a href="{{ path('bugatti') }}"><img class="logo_bugatti" src="{{ asset('build/logo_bugatti.png') }}"></a> #}
-                <p class="marque">BUGATTI</p>
+                <a href="{{ path('bugatti') }}"><p class="marque">BUGATTI</p></a>
+                
             </div>
         </div>
     </div>
@@ -154,5 +151,15 @@
 
             PRESTIGE*CAR est présent sur Paris et Monaco afin de satisfaire un maximum de personne.
     </div>
+
+
+        <h3>Commentaires:</h3>
+        
+            {{ dump( CommentPost) }} 
+
+            {% for value in CommentPost %}
+                <p> {{value['Title']}} </p>
+                <p> {{value['Content']}} </p>
+            {% endfor %}       
 
 {% endblock %}

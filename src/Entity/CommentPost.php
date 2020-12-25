@@ -10,12 +10,23 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class CommentPost
 {
+
+    public function __construct()
+    {
+        $this->CreateAt = new \DateTime();
+    }
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     */ 
+     */
     private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Title;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -25,7 +36,7 @@ class CommentPost
     /**
      * @ORM\Column(type="datetime")
      */
-    private $CreatedAt;
+    private $CreateAt;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -35,6 +46,18 @@ class CommentPost
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->Title;
+    }
+
+    public function setTitle(string $Title): self
+    {
+        $this->Title = $Title;
+
+        return $this;
     }
 
     public function getContent(): ?string
@@ -49,14 +72,14 @@ class CommentPost
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeInterface
+    public function getCreateAt(): ?\DateTimeInterface
     {
-        return $this->CreatedAt;
+        return $this->CreateAt;
     }
 
-    public function setCreatedAt(\DateTimeInterface $CreatedAt): self
+    public function setCreateAt(\DateTimeInterface $CreateAt): self
     {
-        $this->CreatedAt = $CreatedAt;
+        $this->CreateAt = $CreateAt;
 
         return $this;
     }

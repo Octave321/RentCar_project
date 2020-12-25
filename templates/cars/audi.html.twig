@@ -3,16 +3,84 @@
 {% block title %}Hello CarsController!{% endblock %}
 
 {% block stylesheets %}
-{{ parent() }}
-
+   {{ parent() }}
 
 <style>
-   .name_audi{margin-top:100px}
+    
+   .title_audi{ position: relative; top:500px;}
+   .audi_img_back{width:100%; height:95vh; background-attachment: scroll;}
+   .grid_car{display:flex; justify-content: space-around;}
+   .title_car_dispo{margin-top:50px;  margin-bottom:50px; text-align:center}
+   .btn_search{ cursor:pointer; padding-top:15px; padding-bottom:15px; padding-left:20px; padding-right:20px;margin-top:50px; background-color:black; border-radius:15px; color:white; text-align:center}
+   .liste_marque{ display:none;padding-top:15px; padding-bottom:15px; padding-left:25px; padding-right:25px display:inline; list-style:none; background-color:black}
 </style>
-{% endblock %}
+{% endblock %} 
+
+
 
 {% block body %}
 
-<p class="name_audi">AUDI</p>
+<h1 classe="title_audi">Louer une audi</h1>
+<img class="audi_img_back" src="{{ asset('build/img_back_audi.jpg') }}">
+
+
+<div class="grid_car">
+  <div class="item_car">
+    <h3 class="title_car_dispo">2 voitures disponibles</h3>
+
+    <div class="card mb-3" style="max-width: 750px;">
+      <div class="row g-0">
+        <a href="{{ path('audi_r8') }}">
+          <div class="col-md-4">
+            <img src="..." alt="...">
+          </div> 
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="card mb-3" style="max-width: 750px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="..." alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item_car">     
+    <p class="btn_search">Rechercher voiture</p>
+      <ul class="liste_marque">
+        <a class="btn_marque" href="{{ path('audi') }}"><li>AUDI</li></a>
+        <a class="btn_marque" href="{{ path('aston') }}"><li>ASTON MARTIN</li></a>
+        <a class="btn_marque" href="{{ path('bentley') }}"><li>BENTLEY</li></a>
+        <a class="btn_marque" href="{{ path('bmw') }}"><li>BMW</li></a>
+        <a class="btn_marque" href="{{ path('bugatti') }}"><li>BUGATTI</li></a>
+        <a class="btn_marque" href="{{ path('ferrari') }}"><li>FERRARI</li></a>
+        <a class="btn_marque" href="{{ path('ford') }}"><li>FORD</li></a>
+        <a class="btn_marque" href="{{ path('jaguar') }}"><li>JAGUAR</li></a>
+        <a class="btn_marque" href="{{ path('lamborghini') }}"><li>LAMBORGHINI</li></a>
+        <a class="btn_marque" href="{{ path('land_rover') }}"><li>LAND-ROVER</li></a>
+        <a class="btn_marque" href="{{ path('maclaren') }}"><li>MACLAREN</li></a>
+        <a class="btn_marque" href="{{ path('mercedes') }}"><li>MERCEDES</li></a>
+        <a class="btn_marque" href="{{ path('porsche') }}"><li>PORSCHE</li></a>
+        <a class="btn_marque" href="{{ path('rolls') }}"><li>ROLLS-ROYCE</li></a>
+      </ul>    
+    </div>
+</div>
+
 
 {% endblock %}

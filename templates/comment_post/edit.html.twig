@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit CommentPost{% endblock %}
+
+{% block stylesheets %} 
+{{ parent() }}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; margin-top:100px }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .li_login{display:none}
+    .li_register{display:none}
+    .li_compte{display:block}
+</style>
+{% endblock %}
+
+{% block body %}
+    <h1>Edit CommentPost</h1>
+
+    {{ include('comment_post/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('comment_post_index') }}">back to list</a>
+
+    {{ include('comment_post/_delete_form.html.twig') }}
+{% endblock %}
